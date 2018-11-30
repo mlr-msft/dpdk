@@ -28,4 +28,5 @@ TAGS
 build
 build-*
 
-x86_64-native-linuxapp-gcc/
+/build/
+/x86_64-native-linuxapp-gcc/
