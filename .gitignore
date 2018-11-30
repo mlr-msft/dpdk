@@ -13,3 +13,6 @@ GPATH
 GRTAGS
 tags
 TAGS
+
+/build/
+/x86_64-native-linuxapp-gcc/
