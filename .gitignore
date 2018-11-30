@@ -27,3 +27,5 @@ TAGS
 # ignore default build directory, and directories from test-meson-builds.sh
 build
 build-*
+
+x86_64-native-linuxapp-gcc/
