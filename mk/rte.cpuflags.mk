@@ -115,4 +115,5 @@ CPUFLAGSTMP2 := $(subst $(space),$(comma),$(CPUFLAGSTMP1))
 CPUFLAGS_LIST := -DRTE_COMPILE_TIME_CPUFLAGS=$(CPUFLAGSTMP2)
 
 # get DPDK to divulge the correct compiler flags (borrowed from mTCP).
+$(shell if [ ! -d ${RTE_SDK}/${RTE_TARGET}/include ]; then mkdir -p ${RTE_SDK}/${RTE_TARGET}/include; fi)
 $(shell echo ${MACHINE_CFLAGS} > ${RTE_SDK}/${RTE_TARGET}/include/cflags.txt)
