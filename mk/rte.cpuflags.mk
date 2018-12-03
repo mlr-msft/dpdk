@@ -118,3 +118,6 @@ space:= $(empty) $(empty)
 CPUFLAGSTMP1 := $(addprefix RTE_CPUFLAG_,$(CPUFLAGS))
 CPUFLAGSTMP2 := $(subst $(space),$(comma),$(CPUFLAGSTMP1))
 CPUFLAGS_LIST := -DRTE_COMPILE_TIME_CPUFLAGS=$(CPUFLAGSTMP2)
+
+# get DPDK to divulge the correct compiler flags (borrowed from mTCP).
+$(shell echo ${MACHINE_CFLAGS} > ${RTE_SDK}/${RTE_TARGET}/include/cflags.txt)
