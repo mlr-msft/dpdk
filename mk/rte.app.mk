@@ -333,6 +333,7 @@ O_TO_EXE = $(LD) -o $@ $(OBJS-y) \
 	$(LDLIBS) $(LDFLAGS) $(LDFLAGS_$(@)) $(EXTRA_LDFLAGS) \
 	$(MAPFLAGS)
 endif
+$(shell echo $(call linkerprefix,$(LDLIBS)) > ${RTE_SDK}/${RTE_TARGET}/lib/ldflags.txt)
 O_TO_EXE_STR = $(subst ','\'',$(O_TO_EXE)) #'# fix syntax highlight
 O_TO_EXE_DISP = $(if $(V),"$(O_TO_EXE_STR)","  LD $(@)")
 O_TO_EXE_CMD = "cmd_$@ = $(O_TO_EXE_STR)"
